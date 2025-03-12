@@ -7,12 +7,20 @@ app.listen(port, () => {
   console.log(`The server is currently running on port http://localhost:${port}`)
 })
 
+
+// set the static assets middleware
+app.use(express.static('public'))
+
+// define home route
 app.get("/", () => {
   console.log("Home route started");
 
   res.send("Server del mio blog")
 })
 
+
+
+// define route for the posts API
 app.get("/api/v1/posts", (res, req) => {
 
   const posts = [
