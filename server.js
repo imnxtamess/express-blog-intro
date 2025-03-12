@@ -21,7 +21,7 @@ app.get("/", () => {
 
 
 // define route for the posts API
-app.get("/api/v1/posts", (res, req) => {
+app.get("/api/v1/posts", (req, res) => {
 
   const posts = [
     {
